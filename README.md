@@ -7,7 +7,8 @@ To install a C++ compiler on your system using the terminal, you'll need to use 
 
 1. Linux (Debian/Ubuntu): <br>
 
-'''sudo apt update
+''' bash
+sudo apt update
 sudo apt instal g++''' <br>
 This will install the GNU Compiler Collection (g++). <br>
 
