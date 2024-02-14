@@ -43,7 +43,42 @@ After the installation is complete, you can verify that the C++ compiler is inst
 
 ``` bash
 g++ --version
+```
+# Install SFML
+To install SFML (Simple and Fast Multimedia Library) on your system, you can follow these general steps. The specific instructions may vary depending on your operating system. <br>
+
+1. Linux (Debian/Ubuntu): <br>
+``` bash
+sudo apt update
+sudo apt install libsfml-dev
 ``` 
+3. Linux (Fedora/RHEL): <br>
+``` bash
+sudo dnf install SFML
+```
+4. macOS: <br>
+- Using Homebrew:
+``` bash
+brew install sfml
+``` 
+- Using MacPorts:
+``` bash
+sudo port install sfml
+```
+4. Windows: <br>
+- Using vcpkg: <br>
+If you are using Visual Studio and vcpkg, you can install SFML by running the following commands in the vcpkg directory:
+
+``` bash
+vcpkg install sfml
+```
+- Manual Installation: <br>
+If you prefer manual installation on Windows: <br>
+ <br>
+Download the SFML SDK from the official SFML website. <br>
+Extract the downloaded archive to a location of your choice. <br>
+Add the SFML bin directory to your system's PATH environment variable. <br>
+When compiling your C++ program, link against the SFML libraries.
 # Introduction 
 The player is represented by a spaceship on the screen. The player controls the ship by using the left and right arrow keys to move left and right and the up arrow key to move upwards. There are no brakes and to slow down so the player must apply the thrusters to counteract the existing velocity. The spaceship also fires bullets to destroy the asteroid in its path through the spacebar key. 
 
