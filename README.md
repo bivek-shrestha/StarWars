@@ -1,6 +1,44 @@
 # StarWars
 Asteroid game made using C++
 
+# Installation Guide
+# Install C++ into your system
+To install a C++ compiler on your system using the terminal, you'll need to use a package manager that is appropriate for your operating system. Below are instructions for different operating systems: <br>
+
+1. Linux (Debian/Ubuntu): <br>
+
+sudo apt update
+sudo apt install g++ <br>
+This will install the GNU Compiler Collection (g++). <br>
+
+2. Linux (Fedora/RHEL): <br>
+
+sudo dnf install gcc-c++ <br>
+For RHEL or CentOS, you might need to enable the EPEL repository first. <br>
+
+3. macOS: <br>
+On macOS, you can use Homebrew to install GCC: <br>
+
+
+brew install gcc <br>
+This will install the GNU Compiler Collection, and you can use g++ for C++ compilation. <br>
+
+4. Windows: <br>
+If you are using Windows, you can install the Windows Subsystem for Linux (WSL) and then follow the Linux instructions. Alternatively, you can use a Windows compiler such as MinGW or Visual Studio. <br>
+
+- MinGW: <br>
+Download and install MinGW from MinGW website. <br>
+During installation, select the C++ compiler option. <br>
+Add the MinGW bin directory to your system's PATH environment variable <br>.
+- Visual Studio: <br>
+Install Visual Studio Community edition from Visual Studio website. <br>
+During installation, make sure to select the "Desktop development with C++" workload. <br>
+Verifying the Installation: <br>
+After the installation is complete, you can verify that the C++ compiler is installed by opening a terminal and typing: <br>
+
+
+g++ --version
+
 # Introduction 
 The player is represented by a spaceship on the screen. The player controls the ship by using the left and right arrow keys to move left and right and the up arrow key to move upwards. There are no brakes and to slow down so the player must apply the thrusters to counteract the existing velocity. The spaceship also fires bullets to destroy the asteroid in its path through the spacebar key. 
 
