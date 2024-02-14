@@ -6,64 +6,64 @@ The player is represented by a spaceship on the screen. The player controls the 
 
 # Classes and Fuctions used
 # Main file:
- main.cpp: creates an object of Game class i.e game and calls game.run() 
-Game Class:
-Functions: 
-Game(int width , int height): Game class constructor which takes in the window width and height as parameters.
-void initialize(): initializes textures, asteroids , player, score and lives.
-void reset(): resets the player , score , lives and asteroids.
-bool isCollide(Entity *a, Entity *b) : checks for collision between entities.
-void handleEvents(): checks for keyboard inputs, allows switching between different options on the main menu, creates bullets on spacebar, rotates the player on left and right arrow keys and sets thrust to true on up arrow key.
-void handleCollisions(): checks for collision between entities and create explosion at collision site, updates score , lives of player , and resets player to original position when a life is lost
-void update(): ends the explosion , creates new asteroids and calls the update function of every entity 
-void draw(): draws the background, the entities , score, lives, and gameover text onto the screen
-Void run(): initializes, handles events, handles collisions , updates and then draws all while the window is open.
+ main.cpp: creates an object of Game class i.e game and calls game.run() <br>
+Game Class: <br>
+Functions: <br>
+Game(int width , int height): Game class constructor which takes in the window width and height as parameters. <br>
+void initialize(): initializes textures, asteroids , player, score and lives. <br>
+void reset(): resets the player , score , lives and asteroids. <br>
+bool isCollide(Entity *a, Entity *b) : checks for collision between entities. <br>
+void handleEvents(): checks for keyboard inputs, allows switching between different options on the main menu, creates bullets on spacebar, rotates the player on left and right arrow keys and sets thrust to true on up arrow key. <br>
+void handleCollisions(): checks for collision between entities and create explosion at collision site, updates score , lives of player , and resets player to original position when a life is lost <br>
+void update(): ends the explosion , creates new asteroids and calls the update function of every entity <br>
+void draw(): draws the background, the entities , score, lives, and gameover text onto the screen <br>
+Void run(): initializes, handles events, handles collisions , updates and then draws all while the window is open. <br>
 
 
 # Menu class:
-Functions:
-Menu(): sets the background, the fonts and text representing the choices to be displayed on the menu.
- void MoveUp(): sets a different color to the selected choice while upward movement 
- void MoveDown(): sets a different color to the selected choice while downward movement
-void draw(sf::RenderWindow& window): draws background , title and menu choices onto the window.
- int GetPressedItem(): returns selected choice’s index.
+Functions: <br>
+Menu(): sets the background, the fonts and text representing the choices to be displayed on the menu. <br>
+ void MoveUp(): sets a different color to the selected choice while upward movement <br>
+ void MoveDown(): sets a different color to the selected choice while downward movement <br>
+void draw(sf::RenderWindow& window): draws background , title and menu choices onto the window. <br>
+ int GetPressedItem(): returns selected choice’s index. <br>
 # Entity class 
-Functions:
-Entity( Animation & a, float x, float y, float angle = 0.f, float radius= 1.f) : initializes values.
- float x() : returns x position of entity 
- float y()  : returns y position of entity
-float radius() : returns radius of entity 
- float angle() : returns angle at which the entity is placed
- bool isAlive() : returns whether entity is alive or not 
- eName name() : returns name of entity 
- Animation animation()  : returns the animation corresponding to that entity      
-void setAngle( float angle) : sets angle of entity
-void setAlive( bool alive) : sets whether entity is alive or not 
-void setName( eName name) : sets the name of the entity 
-void setAnimation( Animation & a) : sets animation of the entity
-virtual void update() : calls the update function from animation class 
- void draw(sf::RenderWindow& app): sets position , rotation and sprite of each corresponding entity and draws accordingly
-virtual ~Entity(): virtual destructor 
+Functions: <br>
+Entity( Animation & a, float x, float y, float angle = 0.f, float radius= 1.f) : initializes values. <br>
+ float x() : returns x position of entity  <br>
+ float y()  : returns y position of entity <br>
+float radius() : returns radius of entity <br>
+ float angle() : returns angle at which the entity is placed <br>
+ bool isAlive() : returns whether entity is alive or not  <br>
+ eName name() : returns name of entity  <br>
+ Animation animation()  : returns the animation corresponding to that entity     <br> 
+void setAngle( float angle) : sets angle of entity <br>
+void setAlive( bool alive) : sets whether entity is alive or not <br>
+void setName( eName name) : sets the name of the entity  <br>
+void setAnimation( Animation & a) : sets animation of the entity <br>
+virtual void update() : calls the update function from animation class  <br>
+ void draw(sf::RenderWindow& app): sets position , rotation and sprite of each corresponding entity and draws accordingly <br>
+virtual ~Entity(): virtual destructor <br>
 
 
 # Player class , derived from entity class
-Functions:
-Player(Animation & a, float x, float y, float angle = 0.f, float radius=1.f):  initializes values
- bool thrust() : checks for thrust
- void setThrust( bool thrust) : sets thrust
- int lives()  : returns lives
- void setLives( int lives) : sets lives
- void reset(Animation & a, float x, float y, float angle): resetsplayer        
- void update(): updates animation ,updates x and y positions of the player , resets player position when beyond the width and height of the window.
+Functions: <br>
+Player(Animation & a, float x, float y, float angle = 0.f, float radius=1.f):  initializes values <br>
+ bool thrust() : checks for thrust <br>
+ void setThrust( bool thrust) : sets thrust <br>
+ int lives()  : returns lives <br>
+ void setLives( int lives) : sets lives <br>
+ void reset(Animation & a, float x, float y, float angle): resetsplayer    <br>     
+ void update(): updates animation ,updates x and y positions of the player , resets player position when beyond the width and height of the window. <br>
 # Asteroid class, derived from entity class 
-Functions:
- Asteroid( Animation & a, float x, float y, float angle = 0.f, float radius = 1.f): constructor initializes values.
- void update(): updates animation , x and y positions of the asteroid , resets asteroid position when beyond the width and height of the window.
+Functions: <br>
+ Asteroid( Animation & a, float x, float y, float angle = 0.f, float radius = 1.f): constructor initializes values. <br>
+ void update(): updates animation , x and y positions of the asteroid , resets asteroid position when beyond the width and height of the window. 
 
 
 # Bullet class, derived from entity class 
-Functions:
-Bullet( Animation & a, float x, float y, float angle = 0.f, float radius = 1.f):  constructor , initializes values.
+Functions: <br>
+Bullet( Animation & a, float x, float y, float angle = 0.f, float radius = 1.f):  constructor , initializes values. <br>
   void update(): updates x and y positions of the bullet and sets bullet life to false if bullet moves outside the window.
 
 # Outputs
@@ -85,11 +85,11 @@ Bullet( Animation & a, float x, float y, float angle = 0.f, float radius = 1.f):
 <img width="406" alt="gameover" src="https://github.com/bivek-shrestha/StarWars/assets/155466197/bc16b554-f1de-48f8-8d0b-9bca1ac3c5b3">
 
 # References
-Robert Lafore,  “Object Oriented Programming with C++”, Sams Publication.
-Daya Sagar Baral and Diwakar Baral, “The Secrets of Object Oriented Programming”, Bhundipuran Prakasan.
-SFML Game Development -Artur Moreira, Henrik Vogelius Hansson, and Jan Haller.
-Programming principles and Practice using C++- Bjarne Stroustrup.
-Beginning C++ Game Programming - John Horton.
-https://www.sfml-dev.org/tutorials/2.5/
-https://opengameart.org/
-https://www.videvo.net/
+Robert Lafore,  “Object Oriented Programming with C++”, Sams Publication. <br>
+Daya Sagar Baral and Diwakar Baral, “The Secrets of Object Oriented Programming”, Bhundipuran Prakasan. <br>
+SFML Game Development -Artur Moreira, Henrik Vogelius Hansson, and Jan Haller. <br>
+Programming principles and Practice using C++- Bjarne Stroustrup. <br>
+Beginning C++ Game Programming - John Horton. <br>
+https://www.sfml-dev.org/tutorials/2.5/ <br>
+https://opengameart.org/ <br>
+https://www.videvo.net/ <br>
